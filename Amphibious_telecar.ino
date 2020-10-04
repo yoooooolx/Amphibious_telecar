@@ -25,19 +25,6 @@ Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);
 #define ON 1           
 #define OFF 0          
 
-#define M1A 8
-#define M1B 9
-#define M2A 11
-#define M2B 10
-#define M3A 0
-#define M3B 1
-#define M4A 3
-#define M4B 2
-#define M5A 12
-#define M5B 13
-#define M6A 15
-#define M6B 14
-
 enum {
   enSTOP = 0,
   enRUN,
@@ -97,20 +84,20 @@ void setup()
 void run(int Speed)
 {
 
-    pwm.setPWM(M1A, 0, Speed);
-    pwm.setPWM(M1B, 0, 0);
-    pwm.setPWM(M2A, 0, Speed);
-    pwm.setPWM(M2B, 0, 0);
+    pwm.setPWM(8, 0, Speed);
+    pwm.setPWM(9, 0, 0);
+    pwm.setPWM(11, 0, Speed);
+    pwm.setPWM(10, 0, 0);
 
-    pwm.setPWM(M3A, 0, Speed);
-    pwm.setPWM(M3B, 0, 0);
-    pwm.setPWM(M4A, 0, Speed);
-    pwm.setPWM(M4B, 0, 0);
+    pwm.setPWM(1, 0, Speed);
+    pwm.setPWM(0, 0, 0);
+    pwm.setPWM(3, 0, Speed);
+    pwm.setPWM(2, 0, 0);
 
-    pwm.setPWM(M5A, 0, Speed);
-    pwm.setPWM(M5B, 0, 0);
-    pwm.setPWM(M6A, 0, Speed);
-    pwm.setPWM(M6B, 0, 0);
+    pwm.setPWM(12, 0, Speed);
+    pwm.setPWM(13, 0, 0);
+    pwm.setPWM(15, 0, Speed);
+    pwm.setPWM(14, 0, 0);
 }
 
 /**
@@ -125,20 +112,20 @@ void run(int Speed)
 */
 void back(int Speed)
 {
-    pwm.setPWM(M1A, 0, 0);
-    pwm.setPWM(M1B, 0, Speed);
-    pwm.setPWM(M2A, 0, 0);
-    pwm.setPWM(M2B, 0, Speed);
+    pwm.setPWM(8, 0, 0);
+    pwm.setPWM(9, 0, Speed);
+    pwm.setPWM(11, 0, 0);
+    pwm.setPWM(10, 0, Speed);
 
-    pwm.setPWM(M3A, 0, 0);
-    pwm.setPWM(M3B, 0, Speed);
-    pwm.setPWM(M4A, 0, 0);
-    pwm.setPWM(M4B, 0, Speed);
+    pwm.setPWM(1, 0, 0);
+    pwm.setPWM(0, 0, Speed);
+    pwm.setPWM(3, 0, 0);
+    pwm.setPWM(2, 0, Speed);
 
-    pwm.setPWM(M5A, 0, 0);
-    pwm.setPWM(M5B, 0, Speed);
-    pwm.setPWM(M6A, 0, 0);
-    pwm.setPWM(M6B, 0, Speed);
+    pwm.setPWM(12, 0, 0);
+    pwm.setPWM(13, 0, Speed);
+    pwm.setPWM(15, 0, 0);
+    pwm.setPWM(14, 0, Speed);
 
 }
 
@@ -155,20 +142,20 @@ void back(int Speed)
 void brake()
 {
 
-    pwm.setPWM(M1A, 0, 0);
-    pwm.setPWM(M1B, 0, 0);
-    pwm.setPWM(M2A, 0, 0);
-    pwm.setPWM(M2B, 0, 0);
+    pwm.setPWM(8, 0, 0);
+    pwm.setPWM(9, 0, 0);
+    pwm.setPWM(11, 0, 0);
+    pwm.setPWM(10, 0, 0);
 
-    pwm.setPWM(M3A, 0, 0);
-    pwm.setPWM(M3B, 0, 0);
-    pwm.setPWM(M4A, 0, 0);
-    pwm.setPWM(M4B, 0, 0);
+    pwm.setPWM(1, 0, 0);
+    pwm.setPWM(0, 0, 0);
+    pwm.setPWM(3, 0, 0);
+    pwm.setPWM(2, 0, 0);
 
-    pwm.setPWM(M5A, 0, 0);
-    pwm.setPWM(M5B, 0, 0);
-    pwm.setPWM(M6A, 0, 0);
-    pwm.setPWM(M6B, 0, 0);
+    pwm.setPWM(12, 0, 0);
+    pwm.setPWM(13, 0, 0);
+    pwm.setPWM(15, 0, 0);
+    pwm.setPWM(14, 0, 0);
 }
 
 /**
@@ -183,20 +170,20 @@ void brake()
 */
 void left(int Speed)
 {
-    pwm.setPWM(M1A, 0, Speed);
-    pwm.setPWM(M1B, 0, 0);
-    pwm.setPWM(M2A, 0, 0);
-    pwm.setPWM(M2B, 0, Speed);
+    pwm.setPWM(8, 0, Speed);
+    pwm.setPWM(9, 0, 0);
+    pwm.setPWM(11, 0, 0);
+    pwm.setPWM(10, 0, Speed);
 
-    pwm.setPWM(M3A, 0, Speed);
-    pwm.setPWM(M3B, 0, 0);
-    pwm.setPWM(M4A, 0, 0);
-    pwm.setPWM(M4B, 0, Speed);
+    pwm.setPWM(1, 0, Speed);
+    pwm.setPWM(0, 0, 0);
+    pwm.setPWM(3, 0, 0);
+    pwm.setPWM(2, 0, Speed);
 
-    pwm.setPWM(M5A, 0, Speed);
-    pwm.setPWM(M5B, 0, 0);
-    pwm.setPWM(M6A, 0, 0);
-    pwm.setPWM(M6B, 0, Speed);
+    pwm.setPWM(12, 0, Speed);
+    pwm.setPWM(13, 0, 0);
+    pwm.setPWM(15, 0, 0);
+    pwm.setPWM(14, 0, Speed);
 
 
 }
@@ -213,21 +200,21 @@ void left(int Speed)
 */
 void right(int Speed)
 {
-    pwm.setPWM(M1A, 0, 0);
-    pwm.setPWM(M1B, 0, Speed);
-    pwm.setPWM(M2A, 0, Speed);
-    pwm.setPWM(M2B, 0, 0);
+    pwm.setPWM(8, 0, 0);
+    pwm.setPWM(9, 0, Speed);
+    pwm.setPWM(11, 0, Speed);
+    pwm.setPWM(10, 0, 0);
 
-    pwm.setPWM(M3A, 0, 0);
-    pwm.setPWM(M3B, 0, Speed);
-    pwm.setPWM(M4A, 0, Speed);
-    pwm.setPWM(M4B, 0, 0);
+    pwm.setPWM(1, 0, 0);
+    pwm.setPWM(0, 0, Speed);
+    pwm.setPWM(3, 0, Speed);
+    pwm.setPWM(2, 0, 0);
 
     
-    pwm.setPWM(M5A, 0, 0);
-    pwm.setPWM(M5B, 0, Speed);
-    pwm.setPWM(M6A, 0, Speed);
-    pwm.setPWM(M6B, 0, 0);
+    pwm.setPWM(12, 0, 0);
+    pwm.setPWM(13, 0, Speed);
+    pwm.setPWM(15, 0, Speed);
+    pwm.setPWM(14, 0, 0);
 
 
 }
@@ -244,21 +231,21 @@ void right(int Speed)
 */
 void spin_left(int Speed)
 {
-    pwm.setPWM(M1A, 0, Speed);
-    pwm.setPWM(M1B, 0, 0);
-    pwm.setPWM(M2A, 0, 0);
-    pwm.setPWM(M2B, 0, Speed);
+    pwm.setPWM(8, 0, Speed);
+    pwm.setPWM(9, 0, 0);
+    pwm.setPWM(11, 0, 0);
+    pwm.setPWM(10, 0, Speed);
 
-    pwm.setPWM(M3A, 0, Speed);
-    pwm.setPWM(M3B, 0, 0);
-    pwm.setPWM(M4A, 0, 0);
-    pwm.setPWM(M4B, 0, Speed);
+    pwm.setPWM(1, 0, Speed);
+    pwm.setPWM(0, 0, 0);
+    pwm.setPWM(3, 0, 0);
+    pwm.setPWM(2, 0, Speed);
 
 
-    pwm.setPWM(M5A, 0, Speed);
-    pwm.setPWM(M5B, 0, 0);
-    pwm.setPWM(M6A, 0, 0);
-    pwm.setPWM(M6B, 0, Speed);
+    pwm.setPWM(12, 0, Speed);
+    pwm.setPWM(13, 0, 0);
+    pwm.setPWM(15, 0, 0);
+    pwm.setPWM(14, 0, Speed);
 
 }
 
@@ -274,21 +261,21 @@ void spin_left(int Speed)
 */
 void spin_right(int Speed)
 {
-    pwm.setPWM(M1A, 0, 0);
-    pwm.setPWM(M1B, 0, Speed);
-    pwm.setPWM(M2A, 0, Speed);
-    pwm.setPWM(M2B, 0, 0);
+    pwm.setPWM(8, 0, 0);
+    pwm.setPWM(9, 0, Speed);
+    pwm.setPWM(11, 0, Speed);
+    pwm.setPWM(10, 0, 0);
 
-    pwm.setPWM(M3A, 0, 0);
-    pwm.setPWM(M3B, 0, Speed);
-    pwm.setPWM(M4A, 0, Speed);
-    pwm.setPWM(M4B, 0, 0);
+    pwm.setPWM(1, 0, 0);
+    pwm.setPWM(0, 0, Speed);
+    pwm.setPWM(3, 0, Speed);
+    pwm.setPWM(2, 0, 0);
 
     
-    pwm.setPWM(M5A, 0, 0);
-    pwm.setPWM(M5B, 0, Speed);
-    pwm.setPWM(M6A, 0, Speed);
-    pwm.setPWM(M6B, 0, 0);
+    pwm.setPWM(12, 0, 0);
+    pwm.setPWM(13, 0, Speed);
+    pwm.setPWM(15, 0, Speed);
+    pwm.setPWM(14, 0, 0);
 }
 
 
