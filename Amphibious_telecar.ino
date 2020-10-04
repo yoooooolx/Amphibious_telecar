@@ -32,7 +32,7 @@ enum {
   enLEFT,
   enRIGHT,
   enTLEFT,
-  enTRIGHT
+  enTRIGHT,
 } enCarState;
 
 int CarSpeedControl = 2000;
@@ -46,6 +46,8 @@ String ReturnTemp = "";          //Store return value
 int g_CarState = enSTOP;         
 int g_modeSelect = 0;  //0 default;  1:IR 2:tracking 3:ultrasonic  4:colorLED 5: light-seeking 6: Infrared follow
 boolean g_motor = false;
+
+int enLED = LOW;  //State of LED on pin 13
 
 /**
 * Function       setup
@@ -61,6 +63,7 @@ void setup()
 
   Serial.begin(9600);
 
+  pinMode(13, OUTPUT);
 //  for(int i = 2; i < 14; i++)
 //  {
 //    pinMode(i, OUTPUT);
@@ -395,6 +398,16 @@ void serial_data_parse()
         CarSpeedControl = 500;
       }
     }
+
+    if (InputString[15] == '1')//blink
+    {
+        if (enLED == LOW)
+            enLED = HIGH;
+        else
+            enLED = LOW;
+        digitalWrite(13, enLED);
+    }
+
     //run.back,turn left,turn right,stop
     if (g_CarState != enTLEFT && g_CarState != enTRIGHT)
     {
